@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[18],{404:function(r,n,e){"use strict";e.r(n),n.default='(* Sample F# application *)\r\n[<EntryPoint>]\r\nlet main argv = \r\n    printfn "%A" argv\r\n    System.Console.WriteLine("Hello from F#")\r\n    0 // return an integer exit code\r\n\r\n//-------------------------------------------------------- \r\n'}}]);
+//# sourceMappingURL=18.c4c48ec3.chunk.js.map
