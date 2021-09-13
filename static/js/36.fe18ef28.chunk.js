@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[36],{422:function(e,r,a){"use strict";a.r(r),r.default=" = CALCULATE(SUM(Sales[SalesAmount]), PREVIOUSQUARTER(Calendar[DateKey]))"}}]);
-//# sourceMappingURL=36.fe18ef28.chunk.js.map
