@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[16],{402:function(c,e,r){"use strict";r.r(e),e.default="Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com"}}]);
+//# sourceMappingURL=16.66659884.chunk.js.map
