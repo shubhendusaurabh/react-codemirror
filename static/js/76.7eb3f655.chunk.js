@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[76],{462:function(e,t,n){"use strict";n.r(t),t.default='<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset="UTF-8">\n        <title>{% block title %}Welcome!{% endblock %}</title>\n        {% block stylesheets %}{% endblock %}\n    </head>\n    <body>\n        {% block body %}{% endblock %}\n        {% block javascripts %}{% endblock %}\n    </body>\n</html>\n'}}]);
-//# sourceMappingURL=76.7eb3f655.chunk.js.map
