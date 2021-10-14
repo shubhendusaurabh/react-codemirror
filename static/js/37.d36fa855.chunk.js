@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[37],{445:function(n,e,r){"use strict";r.r(e),e.default='-- defines a factorial function\nfunction fact (n)\n  if n == 0 then\n    return 1\n  else\n    return n * fact(n-1)\n  end\nend\n\nprint("enter a number:")\na = io.read("*number")        -- read a number\nprint(fact(a))'}}]);
+//# sourceMappingURL=37.d36fa855.chunk.js.map

@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[47],{442:function(e,n,E){"use strict";E.r(n),n.default="BEGIN\n    SELECT * INTO STRICT myrec FROM emp WHERE empname = myname;\n    EXCEPTION\n        WHEN NO_DATA_FOUND THEN\n            RAISE EXCEPTION 'employee % not found', myname;\n        WHEN TOO_MANY_ROWS THEN\n            RAISE EXCEPTION 'employee % not unique', myname;\nEND;"}}]);
-//# sourceMappingURL=47.cf00d151.chunk.js.map

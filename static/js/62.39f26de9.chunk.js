@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-codemirror"]=this["webpackJsonp@uiw/react-codemirror"]||[]).push([[62],{470:function(e,n,i){"use strict";i.r(n),n.default='begin:\nTextWindow.Write("Enter a number: ")\nnum = TextWindow.ReadNumber()\nremainder = Math.Remainder(num, 2)\nIf (remainder = 0) Then\n TextWindow.WriteLine("The number is Even")\nElse\n TextWindow.WriteLine("The number is Odd")\nEndIf\nGoto begin'}}]);
+//# sourceMappingURL=62.39f26de9.chunk.js.map
