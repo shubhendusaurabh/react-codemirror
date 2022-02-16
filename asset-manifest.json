@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-codemirror/static/css/main.72c3d27e.css",
-    "main.js": "/react-codemirror/static/js/main.752fc04c.js",
+    "main.js": "/react-codemirror/static/js/main.07faf72e.js",
     "static/js/2656.be94281a.chunk.js": "/react-codemirror/static/js/2656.be94281a.chunk.js",
     "static/js/6747.4116ef40.chunk.js": "/react-codemirror/static/js/6747.4116ef40.chunk.js",
     "static/js/7993.36051322.chunk.js": "/react-codemirror/static/js/7993.36051322.chunk.js",
@@ -84,11 +84,11 @@
     "static/js/4371.59b03447.chunk.js": "/react-codemirror/static/js/4371.59b03447.chunk.js",
     "static/js/5757.47ac6e90.chunk.js": "/react-codemirror/static/js/5757.47ac6e90.chunk.js",
     "refractor-vendor.js": "/react-codemirror/static/js/refractor-vendor.746ada47.js",
-    "codemirror-vendor.js": "/react-codemirror/static/js/codemirror-vendor.5632f76d.js",
+    "codemirror-vendor.js": "/react-codemirror/static/js/codemirror-vendor.4823f0fd.js",
     "react-vendor.js": "/react-codemirror/static/js/react-vendor.f2ea311c.js",
     "index.html": "/react-codemirror/index.html",
     "main.72c3d27e.css.map": "/react-codemirror/static/css/main.72c3d27e.css.map",
-    "main.752fc04c.js.map": "/react-codemirror/static/js/main.752fc04c.js.map",
+    "main.07faf72e.js.map": "/react-codemirror/static/js/main.07faf72e.js.map",
     "2656.be94281a.chunk.js.map": "/react-codemirror/static/js/2656.be94281a.chunk.js.map",
     "6747.4116ef40.chunk.js.map": "/react-codemirror/static/js/6747.4116ef40.chunk.js.map",
     "7993.36051322.chunk.js.map": "/react-codemirror/static/js/7993.36051322.chunk.js.map",
@@ -171,14 +171,14 @@
     "4371.59b03447.chunk.js.map": "/react-codemirror/static/js/4371.59b03447.chunk.js.map",
     "5757.47ac6e90.chunk.js.map": "/react-codemirror/static/js/5757.47ac6e90.chunk.js.map",
     "refractor-vendor.746ada47.js.map": "/react-codemirror/static/js/refractor-vendor.746ada47.js.map",
-    "codemirror-vendor.5632f76d.js.map": "/react-codemirror/static/js/codemirror-vendor.5632f76d.js.map",
+    "codemirror-vendor.4823f0fd.js.map": "/react-codemirror/static/js/codemirror-vendor.4823f0fd.js.map",
     "react-vendor.f2ea311c.js.map": "/react-codemirror/static/js/react-vendor.f2ea311c.js.map"
   },
   "entrypoints": [
     "static/js/refractor-vendor.746ada47.js",
-    "static/js/codemirror-vendor.5632f76d.js",
+    "static/js/codemirror-vendor.4823f0fd.js",
     "static/js/react-vendor.f2ea311c.js",
     "static/css/main.72c3d27e.css",
-    "static/js/main.752fc04c.js"
+    "static/js/main.07faf72e.js"
   ]
 }
