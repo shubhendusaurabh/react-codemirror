@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.23% </span>
+                <span class="strong">94.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>49/52</span>
+                <span class='fraction'>48/51</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">82.35% </span>
+                <span class="strong">82.69% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>42/51</span>
+                <span class='fraction'>43/52</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.23% </span>
+                <span class="strong">94% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>49/52</span>
+                <span class='fraction'>47/50</span>
             </div>
         
             
@@ -213,11 +213,7 @@
 <a name='L148'></a><a href='#L148'>148</a>
 <a name='L149'></a><a href='#L149'>149</a>
 <a name='L150'></a><a href='#L150'>150</a>
-<a name='L151'></a><a href='#L151'>151</a>
-<a name='L152'></a><a href='#L152'>152</a>
-<a name='L153'></a><a href='#L153'>153</a>
-<a name='L154'></a><a href='#L154'>154</a>
-<a name='L155'></a><a href='#L155'>155</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L151'></a><a href='#L151'>151</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -328,16 +324,18 @@
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -360,12 +358,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -469,7 +461,7 @@ export function useCodeMirror(props: UseCodeMirror) {
       <span class="missing-if-branch" title="else path not taken" >E</span>if (!view) {
         const viewCurrent = new EditorView({
           state: stateCurrent,
-          parent: container as any,
+          parent: container,
           root,
         });
         setView(viewCurrent);
@@ -478,22 +470,24 @@ export function useCodeMirror(props: UseCodeMirror) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [container, state]);
 &nbsp;
-  useEffect(() =&gt; {
-    return () =&gt; {
+  useEffect(
+    () =&gt; () =&gt; {
       if (view) {
         view.destroy();
+        setView(undefined);
       }
-    };
-  }, [view]);
+    },
+    [view],
+  );
+&nbsp;
+  useEffect(() =&gt; autoFocus &amp;&amp; view &amp;&amp; (view.focus() as any), [autoFocus, view]);
 &nbsp;
   useEffect(() =&gt; {
-    if (view) {
-      const currentValue = view.state.doc.toString();
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (value !== currentValue) {
-<span class="cstat-no" title="statement not covered" >        view.dispatch({</span>
-          changes: { from: 0, to: currentValue.length, insert: value || '' },
-        });
-      }
+    const currentValue = view ? view.state.doc.toString() : '';
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (view &amp;&amp; value !== currentValue) {
+<span class="cstat-no" title="statement not covered" >      view.dispatch({</span>
+        changes: { from: 0, to: currentValue.length, insert: value || '' },
+      });
     }
   }, [value, view]);
 &nbsp;
@@ -505,23 +499,17 @@ export function useCodeMirror(props: UseCodeMirror) {
   }, [
     theme,
     extensions,
-    placeholder,
     height,
     minHeight,
     maxHeight,
     width,
+    placeholderStr,
     minWidth,
     maxWidth,
     editable,
-    indentWithTab,
-    basicSetup,
+    defaultIndentWithTab,
+    defaultBasicSetup,
   ]);
-&nbsp;
-  useEffect(() =&gt; {
-    if (autoFocus &amp;&amp; view) {
-      view.focus();
-    }
-  }, [autoFocus, view]);
 &nbsp;
   return { state, setState, view, setView, container, setContainer };
 }
@@ -532,7 +520,7 @@ export function useCodeMirror(props: UseCodeMirror) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Feb 16 2022 08:02:00 GMT+0000 (Coordinated Universal Time)
+                at Wed Feb 16 2022 17:49:19 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../prettify.js"></script>
         <script>
